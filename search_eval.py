@@ -12,7 +12,10 @@ def load_ranker(cfg_file):
     configuration file used to load the index.
     """
 
-    return metapy.index.AbsoluteDiscount()
+    return metapy.index.JelinekMercer()
+
+    #Score: 0.3967560313617816
+    #return metapy.index.AbsoluteDiscount()
 
     #Score: 0.3990099109391087
     #return metapy.index.PivotedLength()
