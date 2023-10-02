@@ -12,8 +12,10 @@ def load_ranker(cfg_file):
     configuration file used to load the index.
     """
     
-    
-    return metapy.index.DirichletPrior()
+    return metapy.index.DirichletPrior(3000)
+
+    #Score: 0.42009425480020113
+    #return metapy.index.DirichletPrior()
 
     #Score: 0.3805936651546908
     #return metapy.index.JelinekMercer()
