@@ -11,7 +11,7 @@ def load_ranker(cfg_file):
     The parameter to this function, cfg_file, is the path to a
     configuration file used to load the index.
     """
-    return metapy.index.LanguageModelRanker()
+    return metapy.index.PivotedLength()
 
     #Score: 0.39662969347959043
     #return metapy.index.OkapiBM25() 
