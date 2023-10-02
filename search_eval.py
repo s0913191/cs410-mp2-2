@@ -11,8 +11,12 @@ def load_ranker(cfg_file):
     The parameter to this function, cfg_file, is the path to a
     configuration file used to load the index.
     """
+    
+    
+    return metapy.index.DirichletPrior()
 
-    return metapy.index.JelinekMercer()
+    #Score: 0.3805936651546908
+    #return metapy.index.JelinekMercer()
 
     #Score: 0.3967560313617816
     #return metapy.index.AbsoluteDiscount()
