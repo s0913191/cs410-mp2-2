@@ -15,8 +15,8 @@ def load_ranker(cfg_file):
     #Score: 
     #return metapy.index.DirichletPrior(1000)
 
-    #Score: 
-    return metapy.index.DirichletPrior(3000)
+    #Score: 0.295647752245879
+    #return metapy.index.DirichletPrior(3000)
 
     #Score: 
     #return metapy.index.DirichletPrior()
@@ -28,7 +28,7 @@ def load_ranker(cfg_file):
     #return metapy.index.AbsoluteDiscount()
 
     #Score: 
-    #return metapy.index.PivotedLength()
+    return metapy.index.PivotedLength()
 
     #Score: 
     #return metapy.index.OkapiBM25() 
