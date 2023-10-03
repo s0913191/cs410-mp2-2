@@ -13,10 +13,10 @@ def load_ranker(cfg_file):
     """
 
     #Score: 
-    return metapy.index.DirichletPrior(1000)
+    #return metapy.index.DirichletPrior(1000)
 
     #Score: 
-    #return metapy.index.DirichletPrior(3000)
+    return metapy.index.DirichletPrior(3000)
 
     #Score: 
     #return metapy.index.DirichletPrior()
