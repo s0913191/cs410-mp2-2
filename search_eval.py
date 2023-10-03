@@ -65,7 +65,8 @@ def load_ranker(cfg_file):
     #Score: 0.4091226999465542
     #return metapy.index.PivotedLength()
 
-    return metapy.index.PivotedLength(0.15)
+    #Score: 0.41435984732626685
+    #return metapy.index.PivotedLength(0.15)
 
     #Score: 0.4170671141624618
     #return metapy.index.OkapiBM25(k1=1.2,b=0.75,k3=500)
@@ -74,7 +75,7 @@ def load_ranker(cfg_file):
     #return metapy.index.OkapiBM25(k1=2,b=0.75,k3=1000)
 
     #PASSED!! Score: 0.42222875978595253
-    #return metapy.index.OkapiBM25(k1=2,b=0.75,k3=6.5)
+    return metapy.index.OkapiBM25(k1=2,b=0.75,k3=6.5)
 
     #PASSED!! Score: 0.42197778514647183
     #return metapy.index.OkapiBM25(k1=2,b=0.75,k3=10)
