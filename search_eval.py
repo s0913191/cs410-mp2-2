@@ -44,6 +44,8 @@ def load_ranker(cfg_file):
     #Score:0.3907125886476737
     #return InL2Ranker()
 
+    return InL2Ranker(5)
+
     #Score: 
     #return metapy.index.DirichletPrior(1000)
 
@@ -62,19 +64,22 @@ def load_ranker(cfg_file):
     #Score: 0.4091226999465542
     #return metapy.index.PivotedLength()
 
+    #return metapy.index.PivotedLength(0.15)
+
     #Score: 0.4170671141624618
     #return metapy.index.OkapiBM25(k1=1.2,b=0.75,k3=500)
 
     #PASSED!! Score: 0.42159329113868105
     #return metapy.index.OkapiBM25(k1=2,b=0.75,k3=1000)
 
-    return metapy.index.OkapiBM25(k1=2,b=0.75,k3=6.5)
+    #PASSED!! Score: 0.42222875978595253
+    #return metapy.index.OkapiBM25(k1=2,b=0.75,k3=6.5)
 
     #PASSED!! Score: 0.42197778514647183
     #return metapy.index.OkapiBM25(k1=2,b=0.75,k3=10)
 
     #PASSED!! Score: 0.4208391018854435
-    return metapy.index.OkapiBM25(k1=2.5,b=0.75,k3=1000)
+    #return metapy.index.OkapiBM25(k1=2.5,b=0.75,k3=1000)
 
     #Score: 0.3673030717237078
     #return metapy.index.OkapiBM25(k1=1.5,b=1,k3=500)
