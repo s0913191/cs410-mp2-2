@@ -74,6 +74,7 @@ def load_ranker(cfg_file):
     #PASSED!! Score: 0.42159329113868105
     #return metapy.index.OkapiBM25(k1=2,b=0.75,k3=1000)
 
+
     #PASSED!! Score: 0.42222875978595253
     return metapy.index.OkapiBM25(k1=2,b=0.75,k3=6.5)
 
