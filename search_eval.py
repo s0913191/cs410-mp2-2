@@ -5,12 +5,44 @@ import metapy
 import pytoml
 
 
+class InL2Ranker(metapy.index.RankingFunction):
+    """
+    Create a new ranking function in Python that can be used in MeTA.
+    """
+
+    def __init__(self, some_param=1.0):
+        self.param = some_param
+        # You *must* call the base class constructor here!
+        super(InL2Ranker, self).__init__()
+
+    def score_one(self, sd):
+        """
+        You need to override this function to return a score for a single term.
+        For fields available in the score_data sd object,
+        @see https://meta-toolkit.org/doxygen/structmeta_1_1index_1_1score__data.html
+        """
+        doc_size = sd.doc_size
+        doc_term_count = sd.doc_term_count
+        corpus_term_count = sd.corpus_term_count
+        query_term_weight = sd.query_term_weight
+        N = sd.num_docs
+        avg_dl = sd.avg_dl
+        c = self.param
+
+        tfn = doc_term_count * math.log(1 + avg_dl/doc_size,2)
+        score = query_term_weight*(tfn/(tfn+c))*math.log((N+1)/(corpus_term_count+0.5),2)
+        return score
+
+
 def load_ranker(cfg_file):
     """
     Use this function to return the Ranker object to evaluate, 
     The parameter to this function, cfg_file, is the path to a
     configuration file used to load the index.
     """
+    
+    #Score:
+    return InL2Ranker()
 
     #Score: 
     #return metapy.index.DirichletPrior(1000)
@@ -18,8 +50,8 @@ def load_ranker(cfg_file):
     #Score: 0.295647752245879
     #return metapy.index.DirichletPrior(3000)
 
-    #Score: 
-    return metapy.index.DirichletPrior()
+    #Score: 0.30931006020423013
+    #return metapy.index.DirichletPrior()
 
     #Score: 0.35572441040983604
     #return metapy.index.JelinekMercer()
