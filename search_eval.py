@@ -12,8 +12,8 @@ def load_ranker(cfg_file):
     configuration file used to load the index.
     """
 
-    #Score: 0.13901498585780248	
-    #return metapy.index.DirichletPrior(1000)
+    #Score: 
+    return metapy.index.DirichletPrior(1000)
 
     #Score: 
     #return metapy.index.DirichletPrior(3000)
@@ -31,7 +31,7 @@ def load_ranker(cfg_file):
     #return metapy.index.PivotedLength()
 
     #Score: 
-    return metapy.index.OkapiBM25() 
+    #return metapy.index.OkapiBM25() 
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
