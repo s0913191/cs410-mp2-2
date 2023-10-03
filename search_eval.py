@@ -22,10 +22,10 @@ def load_ranker(cfg_file):
     #return metapy.index.DirichletPrior()
 
     #Score: 
-    #return metapy.index.JelinekMercer()
+    return metapy.index.JelinekMercer()
 
-    #Score: 
-    return metapy.index.AbsoluteDiscount()
+    #Score: 0.3820866842006129
+    #return metapy.index.AbsoluteDiscount()
 
     #Score: 0.4091226999465542
     #return metapy.index.PivotedLength()
