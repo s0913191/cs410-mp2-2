@@ -89,7 +89,10 @@ def load_ranker(cfg_file):
     #SOTA 0.43080763818161616
     #return metapy.index.OkapiBM25(k1=2,b=0.6,k3=6.5)
 
-    return metapy.index.OkapiBM25(k1=2,b=0.6,k3=6)
+    return metapy.index.OkapiBM25(k1=2,b=0.6,k3=7)
+
+    #PASSED!! 0.43072895355961865
+    #return metapy.index.OkapiBM25(k1=2,b=0.6,k3=6)
 
     #PASSED!! 0.43044677201792897
     #return metapy.index.OkapiBM25(k1=2.2,b=0.6,k3=6.5)
