@@ -41,7 +41,7 @@ def load_ranker(cfg_file):
     configuration file used to load the index.
     """
     
-    #Score:
+    #Score:0.3907125886476737
     return InL2Ranker()
 
     #Score: 
@@ -66,6 +66,9 @@ def load_ranker(cfg_file):
     #return metapy.index.OkapiBM25(k1=1.2,b=0.75,k3=500)
 
     #Score: 
+    return metapy.index.OkapiBM25(k1=1,b=1,k3=500)
+
+    #Score: 0.418009081473077
     #return metapy.index.OkapiBM25() 
 
 if __name__ == '__main__':
