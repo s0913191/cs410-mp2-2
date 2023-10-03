@@ -42,7 +42,7 @@ def load_ranker(cfg_file):
     """
     
     #Score:0.3907125886476737
-    return InL2Ranker()
+    #return InL2Ranker()
 
     #Score: 
     #return metapy.index.DirichletPrior(1000)
